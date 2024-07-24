@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository contains test cases for the [Cocktail DB API](https://www.thecocktaildb.com/api.php), a public database of cocktails and drinks from around the world. The goal of this project is to validate the functional requirements of the API and perform additional non-functional tests.
+This repository contains test cases for the [Cocktail DB API](https://www.thecocktaildb.com/api.php), a public database of cocktails and drinks from around the world. This project aims to validate the API's functional requirements and perform additional non-functional tests.
 
-Also in icluded in this repository are suggested non-functional tests and the relevant frameworks to test them
+Also included in this repository are suggested non-functional tests and the relevant frameworks to test them
 
 ## Functional Requirements
 
