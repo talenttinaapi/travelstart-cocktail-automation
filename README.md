@@ -4,6 +4,8 @@
 
 This repository contains test cases for the [Cocktail DB API](https://www.thecocktaildb.com/api.php), a public database of cocktails and drinks from around the world. The goal of this project is to validate the functional requirements of the API and perform additional non-functional tests.
 
+Also in icluded in this repository are suggested non-functional tests and the relevant frameworks to test them
+
 ## Functional Requirements
 
 The following test cases cover the API's functional requirements:
@@ -44,6 +46,22 @@ The following test cases cover the API's functional requirements:
   3. Search for a cocktail name in different case (e.g., MARGARITA)
   4. Search for an empty cocktail name
   5. Search for ingredients with special characters in the name
+
+## Non-Functional Tests
+
+1. Performance Test
+
+Test: Measure the response time for searching ingredients and cocktails.
+
+2  Security Test
+
+Test: Verify that the API endpoints are secure and not vulnerable to common attacks like SQL injection, XSS, etc.
+
+## Suggested Framework
+
+Non-Functional Test Automation:
+Performance Testing: K6
+Security Testing: OWASP ZAP
 
 ## Setup
 
@@ -104,3 +122,41 @@ travelstart-cocktail-automation/
 
 ```bash
 npm test
+```
+
+## Performance Testing
+
+- Install k6
+
+ ```bash
+ brew install k6
+ ```
+
+- Create Test Script:
+
+```js
+import http from 'k6/http';
+import { check, sleep } from 'k6';
+
+export let options = {
+  duration: '30s',
+  vus: 10,
+};
+
+export default function () {
+  let res = http.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
+  check(res, { 'status was 200': (r) => r.status == 200 });
+  sleep(1);
+}
+```
+
+- Run test
+
+```bash
+k6 run script.js
+```
+
+## Security Testing
+
+Install Install OWASP ZAP
+Run Active Scan: Use OWASP ZAP to scan the API endpoints for vulnerabilities.
