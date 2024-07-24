@@ -88,7 +88,7 @@ Security Testing: OWASP ZAP
 
 ## Dependencies
 
-  ```Node.js: A JavaScript runtime required to run the tests and scripts.
+  ```   Node.js: A JavaScript runtime required to run the tests and scripts.
         npm: Node package manager, included with Node.js, used to manage project dependencies.
         axios: HTTP client for making API requests.
         mocha: Testing framework for running test cases.
@@ -159,4 +159,5 @@ k6 run script.js
 ## Security Testing
 
 Install Install OWASP ZAP
+
 Run Active Scan: Use OWASP ZAP to scan the API endpoints for vulnerabilities.
