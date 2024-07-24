@@ -45,7 +45,10 @@ The following test cases cover the API's functional requirements:
   2. Search for a cocktail that doesn't exist (e.g., nonexistentcocktail)
   3. Search for a cocktail name in different case (e.g., MARGARITA)
   4. Search for an empty cocktail name
+     
+- ** Additional Test Cases
   5. Search for ingredients with special characters in the name
+  6. Search Cocktails By Name: Multiple Words
 
 ## Non-Functional Tests
 
@@ -60,8 +63,15 @@ Test: Verify that the API endpoints are secure and not vulnerable to common atta
 ## Suggested Framework
 
 Non-Functional Test Automation:
+
 Performance Testing: K6
+
 Security Testing: OWASP ZAP
+
+## Assumptions Made
+- The API endpoints are publicly accessible and do not require authentication.
+- The data returned by the API is accurate and up-to-date.
+- Network latency and other environmental factors are not considered for functional tests.
 
 ## Setup
 
