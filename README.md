@@ -123,4 +123,3 @@ travelstart-cocktail-automation/
 ```bash
 npm test
 ```
-
